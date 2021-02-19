@@ -5,27 +5,27 @@ import javax.swing.JOptionPane;
 public class SlinkedList {
 	protected Node head;
 	protected long size;
-	
+
 	public SlinkedList() {
 		head = null;
 		size = 0;
 	}
-	
-	public void addFirst (Node v) {
+
+	public void addFirst(Node v) {
 		v.setNext(head);
 		head = v;
 		size++;
 	}
-	
-	public void addPos (int posicao, Node novo) {
-		if (posicao ==1) {
+
+	public void addPos(int posicao, Node novo) {
+		if (posicao == 1) {
 			addFirst(novo);
-		} else if (posicao > size+1 || posicao <1) {
-			JOptionPane.showMessageDialog(null, "PosiÁ„o Inv·lida!");
-		} else if (posicao == size+1){
+		} else if (posicao > size + 1 || posicao < 1) {
+			JOptionPane.showMessageDialog(null, "Posi√ß√£o Inv√°lida!");
+		} else if (posicao == size + 1) {
 			Node proximo = head;
-		
-			while (proximo.getNext()!=null) {
+
+			while (proximo.getNext() != null) {
 				proximo = proximo.getNext();
 			}
 			proximo.setNext(novo);
@@ -33,49 +33,49 @@ public class SlinkedList {
 		} else {
 			Node atual = head;
 			int pos = 1;
-		
-			while (atual!=null) {
-				if (posicao-1 == pos){
+
+			while (atual != null) {
+				if (posicao - 1 == pos) {
 					novo.setNext(atual.getNext());
 					atual.setNext(novo);
 					size++;
 					break;
-				}else if (pos != posicao) {
+				} else if (pos != posicao) {
 					atual = atual.getNext();
 					pos++;
 				}
 			}
 		}
 	}
-	
-	public void removeFirst () {
+
+	public void removeFirst() {
 		if (head == null) {
-			JOptionPane.showMessageDialog(null, "N„o È possÌvel remover pois a lista est· vazia!");
+			JOptionPane.showMessageDialog(null, "N√£o √© poss√≠vel remover pois a lista est√° vazia!");
 		}
 		Node t = head;
 		head = head.getNext();
 		t.setNext(null);
-		size = size-1;
+		size = size - 1;
 	}
-	
+
 	public void removePos(int posicao) {
 		if (head == null) {
-			JOptionPane.showMessageDialog(null, "N„o È possÌvel remover pois a lista est· vazia!");
+			JOptionPane.showMessageDialog(null, "N√£o √© poss√≠vel remover pois a lista est√° vazia!");
 		} else if (posicao > size) {
-			JOptionPane.showMessageDialog(null, "PosiÁ„o inv·lida!");
-		} else if (posicao ==1) {
+			JOptionPane.showMessageDialog(null, "Posi√ß√£o inv√°lida!");
+		} else if (posicao == 1) {
 			removeFirst();
 		} else {
 			Node atual = head;
 			int pos = 1;
-		
-			while (atual!=null) {
-				if (posicao-1 == pos){
+
+			while (atual != null) {
+				if (posicao - 1 == pos) {
 					Node proximo = atual.getNext();
 					atual.setNext(proximo.getNext());
 					size--;
 					break;
-				}else if (pos != posicao) {
+				} else if (pos != posicao) {
 					atual = atual.getNext();
 					pos++;
 				}
@@ -86,21 +86,20 @@ public class SlinkedList {
 	public void listAll() {
 		Node atual = head;
 		int pos = 1;
-		
+
 		while (atual != null) {
 			System.out.println(atual.toString());
 			atual = atual.getNext();
 			pos++;
 		}
 	}
-	
-	
-	public void buscaAluno (Node busca) {
+
+	public void buscaAluno(Node busca) {
 		Node atual = head;
 		int pos = 1;
 		boolean localizado = false;
 		while (atual != null) {
-			if (atual.equals(busca) ) {
+			if (atual.equals(busca)) {
 				localizado = true;
 				break;
 			} else {
@@ -109,10 +108,11 @@ public class SlinkedList {
 			}
 		}
 		if (localizado) {
-			JOptionPane.showMessageDialog(null, "Node localizado na lista!\nPosiÁ„o n∫"+pos+"\n"+atual.toString());
+			JOptionPane.showMessageDialog(null,
+					"Node localizado na lista!\nPosi√ß√£o n¬∫" + pos + "\n" + atual.toString());
 		} else {
-			JOptionPane.showMessageDialog(null, "Node n„o localizado na lista!");
+			JOptionPane.showMessageDialog(null, "Node n√£o localizado na lista!");
 		}
 	}
-	
+
 }

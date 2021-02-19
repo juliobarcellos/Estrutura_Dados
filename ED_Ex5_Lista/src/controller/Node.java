@@ -3,8 +3,8 @@ package controller;
 public class Node {
 	private String Element;
 	private Node next;
-	
-	public Node (String Element, Node next) {
+
+	public Node(String Element, Node next) {
 		this.Element = Element;
 		this.next = next;
 	}
@@ -24,6 +24,5 @@ public class Node {
 	public void setNext(Node next) {
 		this.next = next;
 	}
-	
-	
+
 }

@@ -1,18 +1,18 @@
 package controler;
 
 public class Livro {
-	
+
 	private int numReg;
 	private String titulo;
 	private String autor;
 	private double preco;
 	private Livro anterior;
-	
+
 	public Livro(int numReg) {
 		this.numReg = numReg;
 	}
-	
-	public Livro (String titulo) {
+
+	public Livro(String titulo) {
 		this.titulo = titulo;
 	}
 
@@ -96,7 +96,4 @@ public class Livro {
 		return false;
 	}
 
-
-	
-	
 }

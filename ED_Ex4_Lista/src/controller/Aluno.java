@@ -1,16 +1,16 @@
 package controller;
 
 public class Aluno {
-	private String 	numMatricula;
+	private String numMatricula;
 	private String nome, disciplina;
 	private float p1, p2, p3;
 	private Aluno next;
-	
-	public Aluno (String busca) {
+
+	public Aluno(String busca) {
 		this.numMatricula = busca;
 		this.nome = busca;
 	}
-	
+
 	public Aluno(String numMatricula, String nome, String disciplina, float p1, float p2, float p3, Aluno next) {
 		this.numMatricula = numMatricula;
 		this.nome = nome;
@@ -68,11 +68,11 @@ public class Aluno {
 	public void setP3(float p3) {
 		this.p3 = p3;
 	}
-	
+
 	public Aluno getNext() {
 		return next;
 	}
-	
+
 	public void setNext(Aluno next) {
 		this.next = next;
 	}
@@ -108,5 +108,5 @@ public class Aluno {
 			return true;
 		return false;
 	}
-	
+
 }

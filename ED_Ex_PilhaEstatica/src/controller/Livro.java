@@ -1,12 +1,12 @@
 package controller;
 
-public class Book {
+public class Livro {
 	private int numReg;
 	private String titulo;
 	private String autor;
 	private double preco;
 
-	public Book(int numReg, String titulo, String autor, double preco) {
+	public Livro(int numReg, String titulo, String autor, double preco) {
 		super();
 		this.numReg = numReg;
 		this.titulo = titulo;

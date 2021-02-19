@@ -4,7 +4,7 @@ public class Pessoa {
 	private Integer id;
 	private String nome;
 	private String email;
-	
+
 	public Pessoa(Integer id, String nome, String email) {
 		super();
 		this.id = id;
@@ -40,6 +40,5 @@ public class Pessoa {
 	public String toString() {
 		return "Pessoa [id=" + id + ", nome=" + nome + ", email=" + email + "]";
 	}
-	
-	
+
 }

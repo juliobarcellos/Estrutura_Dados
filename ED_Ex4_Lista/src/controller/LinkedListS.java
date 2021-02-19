@@ -1,30 +1,31 @@
 package controller;
+
 import javax.swing.JOptionPane;
 
 public class LinkedListS {
 	protected Aluno head;
 	protected long size;
-	
+
 	public LinkedListS() {
 		head = null;
 		size = 0;
 	}
-	
-	public void addFirst (Aluno novo) {
+
+	public void addFirst(Aluno novo) {
 		novo.setNext(head);
 		head = novo;
 		size++;
 	}
-	
-	public void addPos (int posicao, Aluno novo) {
-		if (posicao ==1) {
+
+	public void addPos(int posicao, Aluno novo) {
+		if (posicao == 1) {
 			addFirst(novo);
-		} else if (posicao > size+1 || posicao <1) {
-			JOptionPane.showMessageDialog(null, "PosiÁ„o Inv·lida!");
-		} else if (posicao == size+1){
+		} else if (posicao > size + 1 || posicao < 1) {
+			JOptionPane.showMessageDialog(null, "Posi√ß√£o Inv√°lida!");
+		} else if (posicao == size + 1) {
 			Aluno proximo = head;
-		
-			while (proximo.getNext()!=null) {
+
+			while (proximo.getNext() != null) {
 				proximo = proximo.getNext();
 			}
 			proximo.setNext(novo);
@@ -32,49 +33,49 @@ public class LinkedListS {
 		} else {
 			Aluno atual = head;
 			int pos = 1;
-		
-			while (atual!=null) {
-				if (posicao-1 == pos){
+
+			while (atual != null) {
+				if (posicao - 1 == pos) {
 					novo.setNext(atual.getNext());
 					atual.setNext(novo);
 					size++;
 					break;
-				}else if (pos != posicao) {
+				} else if (pos != posicao) {
 					atual = atual.getNext();
 					pos++;
 				}
 			}
 		}
 	}
-	
-	public void removeFirst () {
+
+	public void removeFirst() {
 		if (head == null) {
-			JOptionPane.showMessageDialog(null, "N„o È possÌvel remover pois a lista est· vazia!");
+			JOptionPane.showMessageDialog(null, "N√£o √© poss√≠vel remover pois a lista est√° vazia!");
 		}
 		Aluno t = head;
 		head = head.getNext();
 		t.setNext(null);
 		size--;
 	}
-	
+
 	public void removePos(int posicao) {
 		if (head == null) {
-			JOptionPane.showMessageDialog(null, "N„o È possÌvel remover pois a lista est· vazia!");
+			JOptionPane.showMessageDialog(null, "N√£o √© poss√≠vel remover pois a lista est√° vazia!");
 		} else if (posicao > size) {
-			JOptionPane.showMessageDialog(null, "PosiÁ„o inv·lida!");
-		} else if (posicao ==1) {
+			JOptionPane.showMessageDialog(null, "Posi√ß√£o inv√°lida!");
+		} else if (posicao == 1) {
 			removeFirst();
 		} else {
 			Aluno atual = head;
 			int pos = 1;
-		
-			while (atual!=null) {
-				if (posicao-1 == pos){
+
+			while (atual != null) {
+				if (posicao - 1 == pos) {
 					Aluno proximo = atual.getNext();
 					atual.setNext(proximo.getNext());
 					size--;
 					break;
-				}else if (pos != posicao) {
+				} else if (pos != posicao) {
 					atual = atual.getNext();
 					pos++;
 				}
@@ -85,21 +86,20 @@ public class LinkedListS {
 	public void listAll() {
 		Aluno atual = head;
 		int pos = 1;
-		
+
 		while (atual != null) {
 			System.out.println(atual.toString());
 			atual = atual.getNext();
 			pos++;
 		}
 	}
-	
-	
-	public void buscaAluno (Aluno busca) {
+
+	public void buscaAluno(Aluno busca) {
 		Aluno atual = head;
 		int pos = 1;
 		boolean localizado = false;
 		while (atual != null) {
-			if (atual.equals(busca) ) {
+			if (atual.equals(busca)) {
 				localizado = true;
 				break;
 			} else {
@@ -108,10 +108,11 @@ public class LinkedListS {
 			}
 		}
 		if (localizado) {
-			JOptionPane.showMessageDialog(null, "Aluno localizado na lista!\nPosiÁ„o n∫"+pos+"\n"+atual.toString());
+			JOptionPane.showMessageDialog(null,
+					"Aluno localizado na lista!\nPosi√ß√£o n¬∫" + pos + "\n" + atual.toString());
 		} else {
-			JOptionPane.showMessageDialog(null, "Aluno n„o localizado na lista!");
+			JOptionPane.showMessageDialog(null, "Aluno n√£o localizado na lista!");
 		}
 	}
-	
+
 }

@@ -37,20 +37,19 @@ public class PrincipalEx4 {
 		System.out.println("");
 		lista.listAll();
 		buscarLivro(lista);
-		
+
 //		adicionarAluno (lista);
 	}
 
-	private static void buscarLivro (LinkedListS lista) {
-		
-		String busca = JOptionPane.showInputDialog("Digite o número de matrícula ou o nome do aluno desejado");
-			Aluno aluno = new Aluno(busca);
-			lista.buscaAluno(aluno);
+	private static void buscarLivro(LinkedListS lista) {
+
+		String busca = JOptionPane.showInputDialog("Digite o nÃºmero de matrÃ­cula ou o nome do aluno desejado");
+		Aluno aluno = new Aluno(busca);
+		lista.buscaAluno(aluno);
 	}
 
-		
 //	public static void adicionarAluno(LinkedListS lista) {
-//		String numMatricula = JOptionPane.showInputDialog("Digite o número de matrícula do novo aluno:");
+//		String numMatricula = JOptionPane.showInputDialog("Digite o nÃºmero de matrÃ­cula do novo aluno:");
 //		String nome = JOptionPane.showInputDialog("Digite o nome do novo aluno:");
 //		String disciplina = JOptionPane.showInputDialog("Digite o nome da disciplina do novo aluno:");
 //		float p1 = Float.parseFloat(JOptionPane.showInputDialog("Digite a nota p1 do novo aluno:"));
@@ -58,8 +57,8 @@ public class PrincipalEx4 {
 //		float p3 = Float.parseFloat(JOptionPane.showInputDialog("Digite a nota p3 do novo aluno:"));
 //		Aluno novo = new Aluno(numMatricula, nome, disciplina, p1, p2, p3, null);
 //		
-//		final String [] opcao = {"Cabeça", "Posição específica"};
-//		int opc = JOptionPane.showOptionDialog(null, "Deseja inserir o Aluno no topo da lista ou em uma posição específica?", "Escolha uma opção", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null,opcao, opcao[0]);
+//		final String [] opcao = {"CabeÃ§a", "PosiÃ§Ã£o especÃ­fica"};
+//		int opc = JOptionPane.showOptionDialog(null, "Deseja inserir o Aluno no topo da lista ou em uma posiÃ§Ã£o especÃ­fica?", "Escolha uma opÃ§Ã£o", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null,opcao, opcao[0]);
 //		switch (opc) {
 //		case 0:
 //			lista.addFirst(novo);
@@ -71,7 +70,5 @@ public class PrincipalEx4 {
 //			break;
 //		}
 //	}
-	
-	
-	
+
 }

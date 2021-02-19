@@ -2,26 +2,26 @@ package model;
 
 public class Aluno {
 
-	private String Nome;
-	private int Idade;
-	private char Sexo;
-	
+	private String nome;
+	private int idade;
+	private char sexo;
+
 	public Aluno(String nome, int idade, char sexo) {
-		this.Nome = nome;
-		this.Idade = idade;
-		this.Sexo = sexo;
+		this.nome = nome;
+		this.idade = idade;
+		this.sexo = sexo;
 	}
-	
+
 	public String getNome() {
-		return this.Nome;
+		return this.nome;
 	}
-	
+
 	public int getIdade() {
-		return this.Idade;
+		return this.idade;
 	}
-	
+
 	public char getSexo() {
-		return this.Sexo;
+		return this.sexo;
 	}
-	
+
 }
