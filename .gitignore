@@ -13,6 +13,8 @@ tmp/
 local.properties
 .settings/
 */.settings/
+org.eclipse.jdt.core.prefs
+*./org.eclipse.jdt.core.prefs
 .loadpath
 .recommenders
 
