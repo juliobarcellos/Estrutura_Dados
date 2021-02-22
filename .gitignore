@@ -99,3 +99,12 @@ org.eclipse.jdt.core.prefs
 hs_err_pid*
 
 # End of https://www.toptal.com/developers/gitignore/api/java,eclipse
+ED_Arvores/.classpath
+ED_Aula_1/.classpath
+ED_Aula_2/.classpath
+ED_Ex4_Lista/.classpath
+ED_Ex5_Lista/.classpath
+ED_Ex_FilaEstatica/.classpath
+ED_Ex_Lista_Livros/.classpath
+ED_Ex_PilhaDinamica/.classpath
+ED_Ex_PilhaEstatica/.classpath
