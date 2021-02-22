@@ -26,6 +26,10 @@ demonstrar a diferença entre métodos públicos, privados e estáticos
  
 - O arquivo [Principal](ED_Aula_2/src/view/Principal.java) cria uma nova instância de vetor e o preenche com alguns alunos, utilizando alguns métodos para exemplificar o funcionamento e interação entre as classes
  
+### [ED_Recursivas](ED_Recursivas/src/controller/Metodos.java)
+Tivemos uma aula apenas para reforçar o conceito de funções recursivas, e foram passados alguns algorítmos para exemplificar as diferenças no tempo de execução de cada função.
+Os métodos apresentados foram: busca linear, pesquisa binária, pesquisa binária recursiva, soma linear recursiva, soma binária recursiva e maior recursiva
+
 ### [ED_Ex4_Lista](https://github.com/juliobarcellos/Estrutura_Dados/tree/master/ED_Ex4_Lista/src)
 Crie uma Lista Ligada em Java do tipo Aluno.
 - A classe [Aluno](ED_Ex4_Lista/src/controller/Aluno.java) deve conter um número de matrícula, nome, disciplina, notas 1, 2 e 3 e o ponteiro para o próximo livro;
@@ -105,3 +109,28 @@ Criar uma fila estática em Java (usando vetor) de pessoas.
   - Verificar o tamanho da fila.
 
 Criei uma classe [Principal](ED_Ex_FilaEstatica/src/view/PrincipalFilaEstatica.java) para testar e exemplificar as classes funcionando.
+
+### [ED_Arvores](https://github.com/juliobarcellos/Estrutura_Dados/tree/master/ED_Arvores/src)
+Conteúdo prático da aula sobre árvores. 
+- No package [tree](https://github.com/juliobarcellos/Estrutura_Dados/tree/master/ED_Arvores/src/tree) temos a implementação de uma estrutura de [árvore](ED_Arvores/src/tree/No.java) comum e uma classe [principal](ED_Arvores/src/tree/Principal.java) contendo alguns métodos para exemplificar a utilização da estrutura.
+- No package [binaryTree](https://github.com/juliobarcellos/Estrutura_Dados/tree/master/ED_Arvores/src/binaryTree) temos:
+  - A implementação de uma [árvore binária](ED_Arvores/src/binaryTree/ArvoreBinaria.java) com os métodos para inicializar, adicionar um nó, remover um nó, buscar um nó e getRaiz. 
+  - A classe [NoBinario](ED_Arvores/src/binaryTree/NoBinario.java) simples
+  - Uma classe de [percursos](ED_Arvores/src/binaryTree/Percursos.java) com os métodos de percurso (inOrder, preOrder e posOrder) além de alguns métodos extras para calcular a quantidade de nós da árvore, sua altura, folhas, nós maior e menor. 
+  - Por fim, uma classe [principal](ED_Arvores/src/binaryTree/Principal.java) contendo um exemplo do uso dos métodos utilizados com árvores binárias.
+
+### [ED_SortMethods](https://github.com/juliobarcellos/Estrutura_Dados/tree/master/ED_Sort_Methods/src)
+Conteúdo das aulas sobre métodos de ordenação.
+- No package [controller](https://github.com/juliobarcellos/Estrutura_Dados/tree/master/ED_Sort_Methods/src/controller) temos o arquivo com os [métodos de ordenação](ED_Sort_Methods/src/controller/SortMethods.java) contendo um método pra preencher vetores de inteiros aleatoriamente, um método para exibir o vetor, e os métodos de ordenação abaixo:
+  - BubbleSort;
+  - QuickSort;
+  - InsertionSort;
+  - InsertionSortBinary;
+  - SelectionSort;
+  - HeapSort (Max e Min, com os métodos MaxHeapify e MinHeapify);
+  - MergeSort (Recursivo, acompanhado do método Merge).
+- No package [view](https://github.com/juliobarcellos/Estrutura_Dados/tree/master/ED_Sort_Methods/src/view) temos a classe [principal](ED_Sort_Methods/src/view/Principal.java) com um exemplo de comparação do tempo de execução de todos os métodos de ordenação em cima de um vetor inteiro de 50000 posições.
+
+### [ED_Collections](https://github.com/juliobarcellos/Estrutura_Dados/tree/master/ED_Collections/src/controller)
+Conteúdo das aulas sobre Collections Java.
+- Temos exemplos do uso de List e ArrayList e alguns métodos como o add, remove, clear, for each e o Collections.sort() (Aprendemos também sobre LinkedList porém não tivemos um exemplo em código) [Listas](ED_Collections/src/controller/Listas.java). Em [HashSets](ED_Collections/src/controller/HashSets.java) aprendemos a lógica dos Hashs e também a usar o iterator com as collections. Temos uma implementação simples de [LinkedHashSet](ED_Collections/src/controller/LinkedHashSets.java), o [TreeSet](ED_Collections/src/controller/TreeSets.java) e sua natureza de ordenação automática (utilizando como exemplo a classe [Dog](ED_Collections/src/controller/Dog.java) implementando a interface `Comparable<>`, o [HashMap](ED_Collections/src/controller/HashMaps.java) trazendo o conceito de armazenamento de chave e valor, e por fim a classe [Comparador](ED_Collections/src/controller/Comparador.java) contendo a implementação de um HashSet, um TreeSet e um LinkedHashSet para mostrar a diferença no tempo de execução de cada uma dessas collections usando como base a inserção de 1000 elementos em cada collection.
